@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwindCDN.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        '3xl': '1920px',
+                        // => @media (min-width: 1920px) { ... }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <title>Chandkaushik</title>
+    <style>
+        body {
+            background-color: #4d272d;
+        }
+
+        .text-stroke {
+            /* color: white; */
+            /* Set the color of the text */
+            text-shadow:
+                -1px -1px 0 #fff,
+                /* Top left */
+                1px -1px 0 #fff,
+                /* Top right */
+                -1px 1px 0 #fff,
+                /* Bottom left */
+                1px 1px 0 #fff;
+            /* Bottom right */
+        }
+    </style>
+</head>
+
+<body id="body" class="">
+    <div class="mx-auto select-none max-w-screen-2xl">
+
+        <div class="flex justify-center">
+
+            <div class="relative ">
+
+                <!-- Background image -->
+                <img id="banner_en" src="assets/bg.png" class="max-h-screen mx-auto " />
+
+
+
+
+                <div class="absolute top-0 z-20">
+                    <img src="assets/slide_bg.png" alt="" class="max-h-screen " />
+                </div>
+
+                <!-- <div class="absolute top-0 z-20">
+                    <img :src="en?'assets/home_text.png':'hindi_assets/home_text.png'" alt="" class="max-h-screen " />
+                </div> -->
+
+                <!-- title text -->
+
+                <div
+                    class="absolute inset-0 w-[65%] h-[15%] top-[13%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 grid place-content-center justify-center text-center cursor-default">
+                    <div id="title_text"
+                        class="sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl 3xl:text-7xl  2xl:px-2 text-[#ecbf50] text-stroke">
+                        <!-- Shalibhadraji -->
+                    </div>
+
+                </div>
+
+
+                <!-- Radio Button Based Language Select -->
+                <div id="langSelect"
+                    class=" absolute right-0 top-3 z-50 md:right-2 lg:top-6 lg:right-[3%] xl:right-[6%] xl:top-6 2xl:top-9   "
+                    style="font-family: customFont;">
+                    <div id="language"
+                        class="rounded-full px-1 text-center flex place-items-center scale-50 md:scale-75 lg:scale-100 2xl:scale-125 ">
+
+                        <label class=" cursor-pointer "><input type="radio" onClick="val('English')" name="lang" id="en"
+                                value="English" /><span
+                                class="grid place-items-center rounded-[100%] w-[30px] h-[30px] text-center">E</span>
+                        </label>
+
+                        <label class="  cursor-pointer"><input type="radio" onClick="val('Hindi')" name="lang" id="hi"
+                                value="Hindi" /><span
+                                class="grid place-items-center rounded-[100%] w-[30px] h-[30px] text-center">H</span>
+                        </label>
+                        <label class=" cursor-pointer"><input type="radio" onClick="val('Gujrati')" name="lang" id="gu"
+                                value="Gujrati" /><span
+                                class="grid place-items-center rounded-[100%] w-[30px] h-[30px] text-center">G</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- play and pause button -->
+                <div class="absolute inset-0 top-[42%]">
+                    <div class="flex items-center justify-between px-10 lg:px-11 xl:px-20 2xl:px-28">
+                        <div class="z-50 duration-300 transform hover:scale-110">
+                            <button id="playBtn" class="" type="button">
+                                <img class="w-16 cursor-pointer lg:w-32 2xl:w-30 animate-wiggle"
+                                    src="assets/play.png" />
+                            </button>
+
+                            <button id="pauseBtn" class="hidden" type="button">
+                                <img class="w-16 cursor-pointer lg:w-32 2xl:w-30 animate-wiggle"
+                                    src="assets/pause.png" />
+                            </button>
+                        </div>
+
+
+                        <div class="z-50 duration-300 transform hover:scale-110">
+                            <button id="replayBtn" class="" type="button">
+                                <img class="w-16 cursor-pointer lg:w-32 2xl:w-30 " src="assets/replay.png" />
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Video  -->
+                <div class="absolute inset-0 z-10 flex items-center justify-center overflow-auto ">
+                    <!-- English video -->
+                    <div class="w-3/5 mt-[2.3%]  mr-0.5">
+
+                        <!-- english video -->
+                        <video id="myVideo" width="100%" class=" w-full h-full" src="video/english_video/video.webm">
+                            <track id="track" kind="subtitles" src="" srclang="en" label="English" default />
+                            <!-- <track kind="subtitles" src="video/english_video/video.vtt" srclang="en" label="English" default /> -->
+                        </video>
+                        <!-- hindi video -->
+                        <video id="myVideo2" width="100%" class="hidden w-full h-full"
+                            src="video/hindi_video/video.webm">
+                        </video>
+                        <!-- gujrati video -->
+                        <!-- <video id="myVideo3" width="100%" class="hidden w-full h-full"
+                            src="video/gujrati_video/video.webm">
+                        </video> -->
+
+
+                    </div>
+
+                    <!--/Dialog -->
+                </div><!-- /Overlay -->
+
+                <!-- fullscreen image -->
+                <div id="fullscreenBtn" class="absolute z-50 cursor-pointer sm:top-2/3 top-9/12 right-[25%]">
+                    <img src="assets/fullscreen.png" class="w-8 md:w-10 2xl:w-12 mx-auto mr-8 " />
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="subtitle.js"></script>
+    <script src="./json/data.js"></script>
+    <script>
+
+        if (window.innerHeight > window.innerWidth) {
+            alert("Please use Landscape!");
+        }
+        let video;
+        // const video = document.getElementById('myVideo');
+        const englishVideo = document.getElementById('myVideo');
+        const hindiVideo = document.getElementById('myVideo2');
+        const gujratiVideo = document.getElementById('myVideo2');
+
+        const playBtn = document.getElementById('playBtn');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const replayBtn = document.getElementById('replayBtn');
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+
+        // play button EventListner
+        playBtn.addEventListener('click', function () {
+            video.play();
+            togglePlayPauseButtons();
+        });
+
+        // Pause button EventListner
+        pauseBtn.addEventListener('click', function () {
+            video.pause();
+            togglePlayPauseButtons();
+        });
+
+        // replay button EventListner
+        replayBtn.addEventListener('click', function () {
+            video.currentTime = 0;
+            video.play();
+            togglePlayPauseButtons();
+        });
+
+        // fullscreen EventListner
+        fullscreenBtn.addEventListener('click', function () {
+            toggleFullscreen();
+        });
+
+        function togglePlayPauseButtons() {
+            if (video.paused) {
+                playBtn.classList.remove('hidden');
+                pauseBtn.classList.add('hidden');
+            } else {
+                playBtn.classList.add('hidden');
+                pauseBtn.classList.remove('hidden');
+            }
+        }
+
+        function toggleFullscreen() {
+            if (document.fullscreenElement) {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            } else {
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                }
+            }
+        }
+    </script>
+
+    <script>
+        // let data = {};
+
+        // radiobutton function
+
+        let English = document.getElementById("en");
+        let Hindi = document.getElementById("hi");
+        let Gujrati = document.getElementById("gu");
+
+        var lang = localStorage.getItem("language");
+        if (!lang) {
+            localStorage.setItem("language", "English")
+            document.getElementById('body').style.setProperty("font-family", 'customFont');
+            var lang = localStorage.getItem("language");
+        }
+
+        if (lang === "English") {
+            document.getElementById('body').style.setProperty("font-family", 'customFont');
+
+            video = englishVideo;
+
+            English.checked = true;
+            Hindi.checked = false;
+            Gujrati.checked = false;
+
+        }
+        if (lang === "Hindi") {
+            // document.getElementById('body').classList.add("font-bold");
+
+            document.getElementById('myVideo').classList.add("hidden");
+            document.getElementById('myVideo2').classList.remove("hidden");
+            // document.getElementById('myVideo3').classList.add("hidden");
+
+            video = hindiVideo;
+
+            document.getElementById('body').style.setProperty("font-family", 'customFont');
+
+            English.checked = false;
+            Hindi.checked = true;
+            Gujrati.checked = false;
+
+        }
+
+        if (lang === "Gujrati") {
+            document.getElementById('body').classList.add("font-semibold");
+
+            document.getElementById('myVideo').classList.add("hidden");
+            document.getElementById('myVideo2').classList.remove("hidden");
+            // document.getElementById('myVideo3').classList.remove("hidden");
+
+            video = gujratiVideo;
+
+            document.getElementById('body').style.setProperty("font-family", 'customFont');
+
+            English.checked = false;
+            Hindi.checked = false;
+            Gujrati.checked = true;
+
+        }
+
+        // console.log(lang)
+        function val(selectLang) {
+
+            var d = selectLang;
+            localStorage.removeItem("language");
+            localStorage.setItem("language", d);
+            lang = localStorage.getItem("language");
+
+            document.getElementById("title_text").innerHTML = data[lang].title_text;
+
+            if (lang === "English") {
+                // window.location.reload();
+                document.getElementById('body').classList.remove("font-semibold");
+
+                // video change
+                document.getElementById('myVideo').classList.remove("hidden");
+                document.getElementById('myVideo2').classList.add("hidden");
+                // document.getElementById('myVideo3').classList.add("hidden");
+
+                video.pause();
+                togglePlayPauseButtons();
+
+                video = englishVideo;
+
+                document.getElementById('body').style.setProperty("font-family", 'customFont');
+
+            }
+            if (lang === "Hindi") {
+                // window.location.reload();
+                document.getElementById('body').classList.remove("font-semibold");
+                // video change
+                document.getElementById('myVideo').classList.add("hidden");
+                document.getElementById('myVideo2').classList.remove("hidden");
+                // document.getElementById('myVideo3').classList.add("hidden");
+
+                video.pause();
+                togglePlayPauseButtons();
+
+                video = hindiVideo;
+
+
+                document.getElementById('body').style.setProperty("font-family", 'customFont');
+
+            }
+
+            if (lang === "Gujrati") {
+                // window.location.reload();
+                document.getElementById('body').classList.add("font-semibold");
+
+                document.getElementById('myVideo').classList.add("hidden");
+                document.getElementById('myVideo2').classList.remove("hidden");
+                // document.getElementById('myVideo3').classList.remove("hidden");
+
+                video.pause();
+                togglePlayPauseButtons();
+
+                video = gujratiVideo;
+
+                document.getElementById('body').style.setProperty("font-family", 'customFont');
+
+
+
+            }
+
+        }
+
+        // fetch('./json/data.json')
+        //     .then((response) => response.json())
+        //     .then((json) => {
+        //         data = json;
+
+        document.getElementById("title_text").innerHTML = data[lang].title_text;
+
+        // });
+    </script>
+
+    <script src="djp.js"></script>
+</body>
+
+</html>

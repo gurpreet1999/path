@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwindCDN.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        '3xl': '1920px',
+                        // => @media (min-width: 1920px) { ... }
+                    }
+                }
+            }
+        }
+    </script>
+    <title>I am Jain</title>
+    <style>
+        body {
+
+
+            /* background-color: #821a17; */
+            background-image: url('assets/bg.png');
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+            height: 100vh;
+            /* width: 100vw; */
+            /* overflow: hidden; */
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: transparent;
+            margin: 0 25%;
+            align-content: center;
+            /* padding: 20px; */
+            /* border: 1px solid #888; */
+            width: 50%;
+            height: fit-content;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            /* float: right; */
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body id="body" class="font-bold">
+    <div>
+        <div id="home_videoBtn"
+            class="absolute top-3 sm:left-[3vw] md:left-[5%] lg:left-[3%] xl:left-[6%] 2xl:top-7 lg:top-5  hover:scale-110 duration-500 ease-in-out cursor-pointer">
+            <button id="myBtn"> <img id="video_btn" src="./assets/start_btn.png"
+                    class="h-10 w-24 sm:h-8 sm:w-20 md:h-10 md:w-24 lg:h-14 lg:w-32 xl:h-14 xl:w-36 2xl:h-16 2xl:w-40 3xl:h-20 3xl:w-48"
+                    alt=""> </button>
+        </div>
+
+        <!-- Radio Button Based Language Select -->
+        <div id="langSelect"
+            class=" absolute right-0 top-3 z-50 md:right-2 lg:top-6 lg:right-[3%] xl:right-[6%] xl:top-6 2xl:top-9   "
+            style="font-family: customFont;">
+            <div id="language"
+                class="rounded-full px-1 text-center flex place-items-center scale-50 md:scale-75 lg:scale-100 2xl:scale-125 ">
+
+                <label class=" cursor-pointer "><input type="radio" onClick="val('English')" name="lang" id="en"
+                        value="English" /><span
+                        class="grid place-items-center rounded-[100%] w-[30px] h-[30px] text-center">E</span>
+                </label>
+
+                <label class="  cursor-pointer"><input type="radio" onClick="val('Hindi')" name="lang" id="hi"
+                        value="Hindi" /><span
+                        class="grid place-items-center rounded-[100%] w-[30px] h-[30px] text-center">H</span>
+                </label>
+                <label class=" cursor-pointer"><input type="radio" onClick="val('Gujrati')" name="lang" id="gu"
+                        value="Gujrati" /><span
+                        class="grid place-items-center rounded-[100%] w-[30px] h-[30px] text-center">G</span>
+                </label>
+            </div>
+        </div>
+
+
+        <div class='flex justify-center items-center  '>
+            <div class="relative">
+                <img src="./assets/home_image.png" class="h-[65vh] mt-[2vh]" id="homeDevi" alt="devi">
+
+                <div
+                    class="absolute  grid grid-cols-2 gap-2 justify-items-center sm:top-[39vh] sm:-right-[30vw] md:top-[40vh] md:-right-[25vw]  lg:top-[39.5vh] lg:-right-[29vw] xl:top-[39.5vh] xl:-right-[30vw] 2xl:top-[40vh] 2xl:-right-[30vw] auto-rows-fr">
+                    <div id="who" class="col-span-2 hover:scale-110 duration-500 ease-in-out cursor-pointer">
+                        <a href="who_am_i.html">
+                            <div class="relative">
+                                <img src="./assets/ghkAsset 27.png" class="h-[25vh]" alt="">
+                                <div
+                                    class="absolute grid grid-cols-1 text-center top-0 h-[100%] w-[100%] justify-items-center">
+                                    <div id="whojain"
+                                        class="grid place-content-center w-2/3 sm:text-[11px] md:text-[12px] lg:text-lg lg:-mt-2 lg:leading-5 xl:text-xl xl:leading-normal 2xl:text-2xl 3xl:text-3xl text-orange-300">
+                                        <!-- text getting here -->
+                                    </div>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+
+                    <div id="who1" class="hover:scale-110 duration-500 ease-in-out cursor-pointer">
+                        <a href="i-am-jain.html">
+                            <div class="relative">
+                                <img src="./assets/ghkAsset 27.png" class="h-[25vh]" alt="">
+                                <div
+                                    class="absolute grid grid-cols-1 text-center top-0 h-[100%] w-[100%] justify-items-center">
+                                    <div id="amjain"
+                                        class="grid place-content-center w-2/3 sm:text-[11px] md:text-[12px] lg:text-lg lg:leading-5 xl:text-xl xl:leading-normal 2xl:text-2xl 3xl:text-3xl text-orange-300">
+                                        <!-- text getting here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="who2" class="hover:scale-110 duration-500 ease-in-out cursor-pointer">
+                        <a href="what_is_my_duty.html">
+                            <div class="relative">
+                                <img src="./assets/ghkAsset 27.png" class="h-[25vh]" alt="">
+                                <div
+                                    class="absolute grid grid-cols-1 text-center top-0 h-[100%] w-[100%] justify-items-center">
+                                    <div id="myduty"
+                                        class="grid place-content-center w-2/3 sm:text-[11px] md:text-[12px] lg:text-lg lg:leading-5 xl:text-xl xl:leading-normal 2xl:text-2xl 3xl:text-3xl text-orange-300">
+                                        <!-- text getting here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div id="text" class="absolute top-[74vh] -left-[25vw] -z-10 ">
+                    <!-- lg:w-5/6 -->
+                    <img id="textImg" src="./assets/home_text.png" class="h-[24vh] w-auto " alt="homeText">
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!-- <div id="text" class=" absolute -mt-52 sm:top-52 md:top-28 sm:left-8 lg:-mt-0  lg:top-4 lg:left-24 -z-10">
+        <img id="textImg" src="./assets/home_text_en.png" class="h-auto w-full lg:w-5/6" alt="homeText">
+    </div> -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close"></span>
+            <video id="myVideo" width="2000" height="60%" controls>
+                <source src="./video/english_video/video.webm" type="video/webm">
+                <track id="track" kind="subtitles" src="" srclang="en" label="English" default />
+
+                <!-- <track kind="subtitles" src="video/english_video/video.vtt" srclang="en" label="English" default> -->
+                Your browser does not support the video tag.
+            </video>
+
+            <video id="myVideo2" class="hidden" width="2000" height="60%" controls>
+                <source src="./video/hindi_video/video.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+    </div>
+
+    <script src="subtitle.js"></script>
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        var video = document.getElementById("myVideo");
+        var video2 = document.getElementById("myVideo2");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                video.pause();
+                video2.pause();
+            }
+        }
+    </script>
+    <script src="./json/data.js"></script>
+    <script>
+        if (window.innerHeight > window.innerWidth) {
+            alert("Please use Landscape!");
+        }
+
+        // let data = {};
+        // radiobutton function
+
+        let English = document.getElementById("en")
+        let Hindi = document.getElementById("hi")
+        let Gujrati = document.getElementById("gu")
+
+        var lang = localStorage.getItem("language");
+        if (!lang) {
+            localStorage.setItem("language", "English")
+            document.getElementById('body').style.setProperty("font-family", 'customFont');
+            var lang = localStorage.getItem("language");
+        }
+
+        if (lang === "English") {
+            document.getElementById('body').style.setProperty("font-family", 'customFont');
+
+            English.checked = true;
+            Hindi.checked = false;
+            Gujrati.checked = false;
+
+        }
+        if (lang === "Hindi") {
+            document.getElementById('body').style.setProperty("font-family", 'hindi');
+
+            document.getElementById("textImg").src = "./hindi_assets/home_text.png";
+            document.getElementById("video_btn").src = "./hindi_assets/start_btn.png";
+
+            video.classList.add('hidden');
+            video2.classList.remove('hidden');
+
+            English.checked = false;
+            Hindi.checked = true;
+            Gujrati.checked = false;
+
+        }
+
+        if (lang === "Gujrati") {
+            document.getElementById('body').style.setProperty("font-family", 'gujratiFont');
+
+            document.getElementById("textImg").src = "./gujrati_assets/home_text.png";
+            document.getElementById("video_btn").src = "./gujrati_assets/start_btn.png";
+
+            video.classList.add('hidden');
+            video2.classList.remove('hidden');
+
+            English.checked = false;
+            Hindi.checked = false;
+            Gujrati.checked = true;
+
+        }
+
+        // console.log(lang)
+
+
+        function val(selectLang) {
+
+            var d = selectLang;
+            localStorage.removeItem("language");
+            localStorage.setItem("language", d);
+            lang = localStorage.getItem("language");
+
+            document.getElementById("whojain").innerHTML = data[lang].link1;
+            document.getElementById("amjain").innerHTML = data[lang].link2;
+            document.getElementById("myduty").innerHTML = data[lang].link3;
+
+            if (lang === "English") {
+                // window.location.reload();
+                document.getElementById('body').style.setProperty("font-family", 'customFont');
+
+                document.getElementById("textImg").src = "./assets/home_text.png";
+                document.getElementById("video_btn").src = "./assets/start_btn.png";
+
+                video.classList.remove('hidden');
+                video2.classList.add('hidden');
+
+                video2.pause();
+
+            }
+            if (lang === "Hindi") {
+                // window.location.reload();
+                document.getElementById('body').style.setProperty("font-family", 'hindi');
+
+                document.getElementById("textImg").src = "./hindi_assets/home_text.png";
+                document.getElementById("video_btn").src = "./hindi_assets/start_btn.png";
+
+                video.classList.add('hidden');
+                video2.classList.remove('hidden');
+
+                video.pause();
+                video2.pause();
+
+            }
+
+            if (lang === "Gujrati") {
+                // window.location.reload();
+                document.getElementById('body').style.setProperty("font-family", 'gujratiFont');
+
+                document.getElementById("textImg").src = "./gujrati_assets/home_text.png";
+                document.getElementById("video_btn").src = "./gujrati_assets/start_btn.png";
+
+                video.classList.add('hidden');
+                video2.classList.remove('hidden');
+
+                video.pause();
+                video2.pause();
+
+            }
+
+        }
+
+        // fetch('json/data.json')
+        //     .then((response) => response.json())
+        //     .then((json) => {
+        //         data = json;
+        document.getElementById("whojain").innerHTML = data[lang].link1;
+        document.getElementById("amjain").innerHTML = data[lang].link2;
+        document.getElementById("myduty").innerHTML = data[lang].link3;
+
+        // });
+
+
+    </script>
+
+    <script src="djp.js"></script>
+
+</body>
+
+</html>

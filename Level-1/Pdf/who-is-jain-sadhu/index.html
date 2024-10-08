@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwindCDN.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        '3xl': '1920px',
+                        // => @media (min-width: 1920px) { ... }
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Who is Jain Sadhu</title>
+    <style>
+        body {
+            background-color: #f07b50 !important;
+        }
+    </style>
+</head>
+
+<body id="body" class="font-bold">
+    <div id="home" class="relative xl:mx-[7%]">
+        <!-- Radio Button Based Language Select -->
+        <div id="langSelect"
+            class=" absolute right-0 top-3 z-50 md:right-2 lg:top-6 lg:right-[3%] xl:right-[6%] xl:top-6 2xl:top-9   "
+            style="font-family: customFont;">
+            <div id="language"
+                class="rounded-full px-1 text-center flex place-items-center scale-50 md:scale-75 lg:scale-100 2xl:scale-125 ">
+
+                <label class=" cursor-pointer "><input type="radio" onClick="val('English')" name="lang" id="en"
+                        value="English" /><span
+                        class="grid place-items-center rounded-[100%] w-[30px] h-[30px] text-center">E</span>
+                </label>
+
+                <label class="  cursor-pointer"><input type="radio" onClick="val('Hindi')" name="lang" id="hi"
+                        value="Hindi" /><span
+                        class="grid place-items-center rounded-[100%] w-[30px] h-[30px] text-center">H</span>
+                </label>
+                <label class=" cursor-pointer"><input type="radio" onClick="val('Gujrati')" name="lang" id="gu"
+                        value="Gujrati" /><span
+                        class="grid place-items-center rounded-[100%] w-[30px] h-[30px] text-center">G</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="absolute top-0 left-0">
+            <img src="assets/home_bg.png" class=" h-[100vh] w-[100vw]">
+        </div>
+        <div class="absolute top-0 left-0">
+            <img id="home_front_img" src="assets/home_front.png" class=" h-[100vh] w-[100vw]">
+        </div>
+
+        <div class="absolute top-0 left-0">
+            <img src="assets/home_text_bg.png" class=" h-[100vh] w-[100vw]">
+
+            <div
+                class=" text-red-500 absolute w-[66%] h-[14%] top-[12%] left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-rows-1 z-20">
+                <div id="home_title1" class="grid text-center text-xl lg:text-4xl xl:text-5xl place-content-center">
+                    <!-- Who is Jain Sadhu? -->
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- text boxes 1 -->
+        <div class="absolute top-[26vh] left-0">
+            <img src="assets/link_6.png" class=" h-[19vh] w-[18vw] ">
+            <a href="who_is_jain_sadhu.html.html" class="">
+                <div
+                    class="  text-red-500 absolute w-[15vw] h-[19vh] top-[50%]   left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-rows-1 z-20">
+
+                    <div id="home_text1"
+                        class=" grid text-center text-xs sm:text-xs md:text-sm lg:text-lg lg:px-4 3xl:text-3xl 2xl:text-2xl  place-content-center">
+                        <!-- Who is a Jain Sadhu? -->
+                    </div>
+                </div>
+
+            </a>
+        </div>
+        <!-- text boxes 2 -->
+        <div class="absolute top-[51vh] left-0">
+            <img src="assets/link_6.png" class=" h-[18vh] w-[17vw] ">
+            <a href="how_does_sadhu_look.html" class="">
+                <div
+                    class=" text-red-500 absolute w-[15vw] h-[14vh] top-[50%]  left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-rows-1 z-20">
+
+                    <div id="home_text2"
+                        class=" grid text-center text-xs sm:text-xs lg:text-lg sm:px-2 lg:px-4 3xl:text-3xl 2xl:text-2xl md:text-sm  place-content-center">
+                        <!-- How does a Jain Sadhu look? -->
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- text boxes 3 -->
+        <div class="absolute top-[76vh] left-0">
+            <img src="assets/link_6.png" class=" h-[18vh] w-[17vw] ">
+            <a href="why_do_they_take_diksha.html" class="">
+                <div
+                    class=" text-red-500 absolute w-[14vw] h-[14vh] 3xl:w-[12vw] 2xl:w-[16vw] top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-rows-1 z-20">
+
+                    <div id="home_text3"
+                        class=" grid text-center text-xs sm:px-2 xl:text-xl lg:text-xl md:px-4 lg:px-4  3xl:text-3xl 2xl:text-2xl place-content-center">
+                        <!-- Why do they take Diksha? -->
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- boxes in right -->
+        <!-- text boxes 4 -->
+        <div class="absolute top-[26vh] right-0">
+            <img src="assets/link_6.png" class=" h-[18vh] w-[19vw] ">
+            <a href="where_does_sadhu_live.html" class="">
+                <div
+                    class=" text-red-500 absolute w-[14vw] h-[14vh] lg:w-[14vw] lg:h-[16vh] top-[53%] left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-rows-1 z-20">
+
+                    <div id="home_text4"
+                        class=" grid text-center text-xs sm:px-1 lg:text-lg 3xl:text-3xl md:text-xs md:px-2 lg:px-3 2xl:text-2xl sm:text-xs place-content-center">
+                        <!-- Where does a Jain Sadhu Live? -->
+                    </div>
+                </div>
+
+            </a>
+        </div>
+
+        <!-- text boxes 5 -->
+
+        <div class="absolute top-[51vh] right-0">
+            <img src="assets/link_6.png" class=" h-[18vh] w-[17vw] ">
+            <a href="what_do_they_eat.html" class="">
+                <div
+                    class=" text-red-500 absolute w-[14vw] h-[14vh] lg:w-[14vw] lg:h-[14vh] top-[49%] left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-rows-1 z-20">
+
+                    <div id="home_text5"
+                        class=" grid text-center text-xs sm:px-1 lg:text-lg 3xl:text-3xl md:px-3 lg:px-4 2xl:text-2xl   place-content-center">
+                        <!-- What does a Jain Sadhu eat? -->
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- text boxes 6 -->
+        <div class="absolute top-[76vh] right-0">
+            <img src="assets/link_6.png" class=" h-[17vh] w-[15vw] ">
+            <a href="what_is_my_duty.html" class="">
+                <div
+                    class=" text-red-500 absolute w-[12vw] h-[14vh] top-[49%] left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-rows-1 z-20">
+
+                    <div id="home_text6"
+                        class=" grid text-center text-xs sm:px-2 lg:text-xl 3xl:text-3xl lg:px-2 2xl:text-2xl  place-content-center">
+                        <!-- What is my duty? -->
+                    </div>
+                </div>
+
+            </a>
+        </div>
+
+        <!-- text boxes in hindi -->
+
+    </div>
+    <script src="./json/data.js"></script>
+    <script>
+        if (window.innerHeight > window.innerWidth) {
+            alert("Please use Landscape!");
+        }
+
+        // radiobutton function
+
+        let English = document.getElementById("en");
+        let Hindi = document.getElementById("hi");
+        let Gujrati = document.getElementById("gu");
+
+        var lang = localStorage.getItem("language");
+        if (!lang) {
+            localStorage.setItem("language", "English")
+            document.getElementById('body').style.setProperty("font-family", 'customFont');
+            var lang = localStorage.getItem("language");
+        }
+
+        if (lang === "English") {
+            document.getElementById('body').style.setProperty("font-family", 'customFont');
+
+            English.checked = true;
+            Hindi.checked = false;
+            Gujrati.checked = false;
+
+        }
+        if (lang === "Hindi") {
+            document.getElementById('body').style.setProperty("font-family", 'hindi');
+            // document.getElementById('body').classList.add("font-bold")
+
+            document.getElementById("home_front_img").src = "./hindi_assets/home_front.png";
+
+            English.checked = false;
+            Hindi.checked = true;
+            Gujrati.checked = false;
+
+        }
+
+        if (lang === "Gujrati") {
+            document.getElementById('body').style.setProperty("font-family", 'gujratiFont');
+            // document.getElementById('body').classList.add("font-bold")
+
+            document.getElementById("home_front_img").src = "./gujrati_assets/home_front.png";
+
+            English.checked = false;
+            Hindi.checked = false;
+            Gujrati.checked = true;
+
+        }
+
+        // console.log(lang)
+        function val(selectLang) {
+
+            var d = selectLang;
+            localStorage.removeItem("language");
+            localStorage.setItem("language", d);
+            lang = localStorage.getItem("language");
+
+            document.getElementById("home_title1").innerHTML = data[lang].home_title1;
+            document.getElementById("home_text1").innerHTML = data[lang].home_text1;
+            document.getElementById("home_text2").innerHTML = data[lang].home_text2;
+            document.getElementById("home_text3").innerHTML = data[lang].home_text3;
+            document.getElementById("home_text4").innerHTML = data[lang].home_text4;
+            document.getElementById("home_text5").innerHTML = data[lang].home_text5;
+            document.getElementById("home_text6").innerHTML = data[lang].home_text6;
+
+
+            if (lang === "English") {
+                // window.location.reload();
+
+                document.getElementById('body').style.setProperty("font-family", 'customFont');
+
+                document.getElementById("home_front_img").src = "./assets/home_front.png";
+            }
+            if (lang === "Hindi") {
+                // window.location.reload();
+
+                document.getElementById('body').style.setProperty("font-family", 'hindi');
+                // document.getElementById('body').classList.add("font-bold")
+
+                document.getElementById("home_front_img").src = "./hindi_assets/home_front.png";
+            }
+
+            if (lang === "Gujrati") {
+                // window.location.reload();
+
+                document.getElementById('body').style.setProperty("font-family", 'gujratiFont');
+                // document.getElementById('body').classList.add("font-bold")
+
+                document.getElementById("home_front_img").src = "./gujrati_assets/home_front.png";
+
+            }
+
+        }
+
+        // fetch('json/data.json')
+        //     .then((response) => response.json())
+        //     .then((json) => {
+        //         data = json;
+
+        document.getElementById("home_title1").innerHTML = data[lang].home_title1;
+        document.getElementById("home_text1").innerHTML = data[lang].home_text1;
+        document.getElementById("home_text2").innerHTML = data[lang].home_text2;
+        document.getElementById("home_text3").innerHTML = data[lang].home_text3;
+        document.getElementById("home_text4").innerHTML = data[lang].home_text4;
+        document.getElementById("home_text5").innerHTML = data[lang].home_text5;
+        document.getElementById("home_text6").innerHTML = data[lang].home_text6;
+        // });
+
+    </script>
+
+    <script src="djp.js"></script>
+
+
+</body>
+
+</html>

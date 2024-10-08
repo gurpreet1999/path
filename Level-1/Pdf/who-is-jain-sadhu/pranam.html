@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwindCDN.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        '3xl': '1920px',
+                        // => @media (min-width: 1920px) { ... }
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Pranaam</title>
+
+</head>
+
+<body id="body" class="font-bold">
+
+    <div id="homeIcon">
+        <div class="relative">
+            <div
+                class="absolute top-4 left-[3%] lg:top-4 hover:scale-110 duration-500 ease-in-out  cursor-pointer z-50 ">
+                <a href="what_is_my_duty.html"><img src="./assets/back.png" class="h-[9vh]" alt=""></a>
+            </div>
+
+            <div id="langSelect"
+                class=" absolute right-0 top-3 z-50 md:right-2 lg:top-6 lg:right-[3%] xl:right-[4%] xl:top-6 2xl:top-9   "
+                style="font-family: customFont;">
+                <div id="language"
+                    class="rounded-full px-1 text-center flex place-items-center scale-50 md:scale-75 lg:scale-100 2xl:scale-125 ">
+
+                    <label class=" cursor-pointer "><input type="radio" onClick="val('English')" name="lang" id="en"
+                            value="English" /><span
+                            class="grid place-items-center rounded-[100%] w-[30px] h-[30px] text-center">E</span>
+                    </label>
+
+                    <label class="  cursor-pointer"><input type="radio" onClick="val('Hindi')" name="lang" id="hi"
+                            value="Hindi" /><span
+                            class="grid place-items-center rounded-[100%] w-[30px] h-[30px] text-center">H</span>
+                    </label>
+                    <label class=" cursor-pointer"><input type="radio" onClick="val('Gujrati')" name="lang" id="gu"
+                            value="Gujrati" /><span
+                            class="grid place-items-center rounded-[100%] w-[30px] h-[30px] text-center">G</span>
+                    </label>
+                </div>
+            </div>
+
+
+            <div class="absolute top-0 left-0">
+                <img src="assets/home_bg.png" class=" h-[100vh] w-[100vw]">
+            </div>
+
+
+            <div id="pranamPage" class='flex justify-center items-center h-[100vh] '>
+
+                <div class="relative">
+                    <img src="./assets/pranam.png" class="h-[100vh]" id="pranamImg" />
+                    <a href="index.html"><img src="./assets/home_link.png"
+                            class="absolute bg-green h-[16.5vh] bottom-0 left-1/2 -translate-x-1/2 hover:scale-110 "
+                            id="homeLinkImg" />
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        if (window.innerHeight > window.innerWidth) {
+            alert("Please use Landscape!");
+        }
+
+        // radiobutton function
+
+        let English = document.getElementById("en")
+        let Hindi = document.getElementById("hi")
+        let Gujrati = document.getElementById("gu")
+
+
+        var lang = localStorage.getItem("language");
+        if (!lang) {
+            localStorage.setItem("language", "English")
+        }
+        var lang = localStorage.getItem("language");
+
+        if (lang === "English") {
+            document.getElementById('body').style.setProperty("font-family", 'customFont');
+
+            English.checked = true;
+            Hindi.checked = false;
+            Gujrati.checked = false;
+
+        }
+
+        if (lang === "Hindi") {
+            document.getElementById('body').style.setProperty("font-family", 'hindi');
+            document.getElementById("homeLinkImg").src = "./hindi_assets/home_link.png";
+            document.getElementById("pranamImg").src = "./hindi_assets/pranam.png";
+
+            English.checked = false;
+            Hindi.checked = true;
+            Gujrati.checked = false;
+
+        }
+
+        if (lang === "Gujrati") {
+            document.getElementById('body').style.setProperty("font-family", 'gujratiFont');
+            document.getElementById("homeLinkImg").src = "./gujrati_assets/home_link.png";
+            document.getElementById("pranamImg").src = "./gujrati_assets/pranam.png";
+
+            English.checked = false;
+            Hindi.checked = false;
+            Gujrati.checked = true;
+
+        }
+
+        var select = document.getElementById('language');
+        var option;
+
+
+        function val(selectLang) {
+            var d = selectLang;
+
+            localStorage.removeItem("language");
+            localStorage.setItem("language", d);
+            lang = localStorage.getItem("language");
+
+            if (lang === "English") {
+                document.getElementById('body').style.setProperty("font-family", 'customFont');
+                document.getElementById("homeLinkImg").src = "./assets/home_link.png";
+                document.getElementById("pranamImg").src = "./assets/pranam.png";
+
+            }
+            if (lang === "Hindi") {
+                document.getElementById('body').style.setProperty("font-family", 'hindi');
+                document.getElementById("homeLinkImg").src = "./hindi_assets/home_link.png";
+                document.getElementById("pranamImg").src = "./hindi_assets/pranam.png";
+
+            }
+
+            if (lang === "Gujrati") {
+                document.getElementById('body').style.setProperty("font-family", 'gujratiFont');
+                document.getElementById("homeLinkImg").src = "./gujrati_assets/home_link.png";
+                document.getElementById("pranamImg").src = "./gujrati_assets/pranam.png";
+
+
+            }
+
+        }
+    </script>
+
+    <script src="djp.js"></script>
+
+</body>
+
+</html>

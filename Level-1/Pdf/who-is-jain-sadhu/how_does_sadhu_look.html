@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwindCDN.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        '3xl': '1920px',
+                        // => @media (min-width: 1920px) { ... }
+                    }
+                }
+            }
+        }
+    </script>
+    <title>How does Jain Sadhu Look?</title>
+    <style>
+
+    </style>
+</head>
+
+<body id="body" class="font-bold">
+    <div id="home" class="relative md:mx-[5vw]">
+        <div id="homeIcon"
+            class="absolute left-0 top-3 z-50 md:left-2 lg:top-6 lg:left-[3%] xl:left-[6%] xl:top-6 2xl:top-9 ">
+            <a href="index.html" class="">
+                <img src="assets/home.png" class="w-[8vh] h-[8vh]" alt="">
+            </a>
+        </div>
+        <div id="langSelect"
+            class=" absolute right-0 top-3 z-[120] md:right-2 lg:top-6 lg:right-[3%] xl:right-[6%] xl:top-6 2xl:top-9   "
+            style="font-family: customFont;">
+            <div id="language"
+                class="rounded-full px-1 text-center flex place-items-center scale-50 md:scale-75 lg:scale-100 2xl:scale-125 ">
+
+                <label class=" cursor-pointer "><input type="radio" onClick="val('English')" name="lang" id="en"
+                        value="English" /><span
+                        class="grid place-items-center rounded-[100%] w-[30px] h-[30px] text-center">E</span>
+                </label>
+
+                <label class="  cursor-pointer"><input type="radio" onClick="val('Hindi')" name="lang" id="hi"
+                        value="Hindi" /><span
+                        class="grid place-items-center rounded-[100%] w-[30px] h-[30px] text-center">H</span>
+                </label>
+                <label class=" cursor-pointer"><input type="radio" onClick="val('Gujrati')" name="lang" id="gu"
+                        value="Gujrati" /><span
+                        class="grid place-items-center rounded-[100%] w-[30px] h-[30px] text-center">G</span>
+                </label>
+            </div>
+        </div>
+        <div class="absolute left-0 top-0">
+            <img src="assets/home_front2.png" class=" h-[100vh] w-[100vw]">
+        </div>
+
+        <div
+            class=" text-red-500 absolute w-[68%] h-[2%] top-[8vh]  left-1/2 -translate-x-1/2 -translate-y-1/2 grid grid-rows-1 z-20 ">
+            <div id="home_title2"
+                class="grid text-center text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl  place-content-center 2xl:top-[20vh]   ">
+                <!-- How does a Jain Sadhu Look? -->
+            </div>
+        </div>
+
+        <!-- box 1 -->
+        <div id="modal_link1"
+            class=" opacity-30 absolute  h-[18vh] sm:w-[16vw] md:w-[14vw] top-[25vh] left-[0.8vw] grid grid-rows-1 z-40 hover:cursor-pointer ">
+            <button onclick="currentSlide(1)"></button>
+        </div>
+
+        <!-- box 2 -->
+        <div id="modal_link2"
+            class=" opacity-30 absolute  h-[18vh] sm:w-[16vw] md:w-[14vw] top-[68vh] left-[0.8vw] grid grid-rows-1 z-40 hover:cursor-pointer ">
+            <button onclick="currentSlide(2)"></button>
+        </div>
+
+        <!-- box 3 -->
+        <div id="modal_link3"
+            class=" opacity-30 absolute  h-[18vh] sm:w-[16vw] md:w-[14vw] top-[45.5vh] right-[0.8vw] grid grid-rows-1 z-40 hover:cursor-pointer ">
+            <button onclick="currentSlide(3)"></button>
+        </div>
+
+        <div class="absolute left-0 top-0 ">
+
+            <!-- text 1 -->
+            <div id="banner_2_text_one"
+                class=" text-black absolute h-[7vh] w-[23.5vw] md:w-[21vw] lg:w-[21vw] -translate-x-1/2 -translate-y-1/2 top-[33.2vh] 
+                left-[30.6vw] md:left-[27.5vw] lg:left-[27.5vw] text-xs md:text-xs lg:text-lg xl:text-2xl 2xl:text-3xl 3xl:text-4xl flex place-items-center justify-center text-center">
+                <!-- A Boy after taking Diksha is called a Sadhu -->
+            </div>
+
+            <!-- text 2 -->
+            <div id="banner_2_text_two"
+                class=" text-black absolute h-[16.5vh] w-[26vw] md:w-[23.5vw] lg:w-[23.5vw] -translate-x-1/2 -translate-y-1/2 top-[80vh] 
+                left-[30.3vw] md:left-[27.2vw] lg:left-[27.2vw] text-xs md:text-xs lg:text-lg xl:text-2xl 2xl:text-3xl 3xl:text-4xl flex place-items-center justify-center text-center">
+                <!-- A Boy after taking Diksha is called a Sadhu -->
+            </div>
+            <!-- text -3 -->
+            <div id="banner_2_text_three"
+                class=" text-black absolute h-[11.4vh] w-[20.8vw] md:w-[18.6vw] lg:w-[18.6vw] -translate-x-1/2 -translate-y-1/2 top-[55.7vh] 
+                right-[8vw] md:right-[7.3vw] lg:right-[7.3vw] text-xs md:text-xs lg:text-lg xl:text-2xl 2xl:text-3xl 3xl:text-4xl flex place-items-center justify-center text-center">
+                <!-- A Boy after taking Diksha is called a Sadhu -->
+            </div>
+
+
+            <img id="link2_bg" src="assets/home_.png" class=" h-[100vh] w-[100vw]">
+
+        </div>
+
+    </div>
+    <!-- </div> -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal ">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+
+
+            <div class="relative md:mx-[6vw]  ">
+
+                <div class="absolute top-0 left-0">
+                    <img src="assets/slide_bg.jpg" class="w-[100vw] h-[100vh] border border-l border-red-200" alt="">
+                </div>
+
+                <div id="homeIcon"
+                    class="absolute  top-4 left-[2%] hover:scale-125 duration-500 ease-in-out  cursor-pointer z-40">
+                    <a href="index.html"> <img src="./assets/home.png" class="h-[80%] w-[80%]" alt="" /></a>
+                </div>
+
+                <div class="absolute top-[2vh] left-[60vw] hover:cursor-pointer z-40">
+                    <span class="close">
+                        <img src="assets/close.png" alt="">
+                    </span>
+                </div>
+
+                <div class="slideshow-container">
+
+                    <!-- slide 1 -->
+                    <div class="mySlides fade ">
+
+
+                        <div class="absolute top-0 left-0 ">
+                            <img id="gif11_slide" src="assets/slide_3.gif" class="h-[100vh] w-[100vw]" alt="">
+                        </div>
+
+                        <!-- Title text -->
+                        <div
+                            class=" z-20 absolute h-[12vh] w-[60vw] sm:left-[20vw] md:left-[14vw] top-[87vh]  flex place-items-center justify-center text-center px-2 text-black">
+                            <div id="slide3_text"
+                                class="sm:text-base md:text-xl lg:text-3xl xl:text-4xl 2xl:text-4xl 3xl:text-5xl">
+                                <!-- A Boy after taking Diksha is called a Sadhu -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- slide 2 -->
+                    <div class="mySlides fade ">
+
+
+                        <div class="absolute top-0 left-0 ">
+                            <img id="gif2_slide" src="assets/slide_4.gif" class="h-[100vh] w-[100vw]" alt="">
+                        </div>
+
+                        <!-- Title text -->
+                        <div
+                            class="  z-20 h-[12vh] w-[60vw] absolute sm:left-[25vw] md:left-[14vw] top-[87vh]  flex place-items-center place-content-center justify-center text-center px-2 text-black">
+                            <div id="slide4_text"
+                                class="sm:text-base md:text-xl lg:text-3xl xl:text-4xl 2xl:text-4xl 3xl:text-5xl lg:leading-[2.5rem] xl:leading-[2.8rem] 2xl:leading-[3.8rem] 3xl:leading-[4.5rem]">
+                                <!-- A Girl after taking Diksha is called a Sadhvi -->
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- slide 3 -->
+                    <div class="mySlides fade ">
+
+
+                        <div class="absolute top-0 left-0 ">
+                            <img id="gif2_slide" src="assets/slide_5.gif" class="h-[100vh] w-[100vw]" alt="">
+                        </div>
+
+                        <!-- Title text -->
+                        <div
+                            class="  z-20 absolute h-[12vh] w-[60vw] sm:left-[20vw] md:left-[14vw] top-[87vh]  flex place-items-center justify-center text-center px-2 text-black">
+                            <div id="slide5_text"
+                                class="sm:text-base md:text-xl lg:text-3xl xl:text-4xl 2xl:text-4xl 3xl:text-5xl">
+                                <!-- A Girl after taking Diksha is called a Sadhvi -->
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <!-- Next and previous buttons -->
+            <div
+                class="absolute h-[7vh] w-[60%] flex flex-row justify-between top-[45vh] left-[50%] -translate-x-1/2 -translate-y-1/2 z-40">
+                <a id="left" class="hover:scale-110 ease-in-out duration-300 cursor-pointer" onclick="plusSlides(-1)">
+                    <img src="assets/left.png" class="h-[100%] hover:scale-105 duration-300 ease-in-out cursor-pointer"
+                        alt="">
+                </a>
+                <a id="right" class="hover:scale-110 ease-in-out duration-300 cursor-pointer" onclick="plusSlides(1)">
+                    <img src="assets/right.png" class="h-[100%] hover:scale-105 duration-300 ease-in-out cursor-pointer"
+                        alt="">
+                </a>
+            </div>
+
+            <!-- The dots/circles -->
+            <div id="homeIcon" class="hidden absolute sm:left-[47vw] sm:top-[2vh] md:left-[42vw] md:top-[2vh] z-40"
+                style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <!-- <span class="dot" onclick="currentSlide(4)"></span> -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        let btn1 = document.getElementById("modal_link1");
+        let btn2 = document.getElementById("modal_link2");
+        let btn3 = document.getElementById("modal_link3");
+        // let btn4 = document.getElementById("modal_link4");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+
+        function openModal() {
+            modal.style.display = "block";
+
+
+        }
+
+        btn1.addEventListener("click", openModal);
+        btn2.addEventListener("click", openModal);
+        btn3.addEventListener("click", openModal);
+        // btn4.addEventListener("click", openModal);
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        // window.onclick = function (event) {
+        //     if (event.target == modal) {
+        //         modal.style.display = "none";
+        //         // video.pause();
+
+        //     }
+        // }
+    </script>
+    <script src="./json/data.js"></script>
+    <script>
+        if (window.innerHeight > window.innerWidth) {
+            alert("Please use Landscape!");
+        }
+        // let data = {};
+
+        // radiobutton function
+
+        let English = document.getElementById("en");
+        let Hindi = document.getElementById("hi");
+        let Gujrati = document.getElementById("gu");
+
+        var lang = localStorage.getItem("language");
+        if (!lang) {
+            localStorage.setItem("language", "English")
+            document.getElementById('body').style.setProperty("font-family", 'customFont');
+            var lang = localStorage.getItem("language");
+        }
+
+        if (lang === "English") {
+            document.getElementById('body').style.setProperty("font-family", 'customFont');
+
+
+            English.checked = true;
+            Hindi.checked = false;
+            Gujrati.checked = false;
+
+        }
+        if (lang === "Hindi") {
+            document.getElementById('body').style.setProperty("font-family", 'hindi');
+            // document.getElementById('body').classList.add("font-bold")
+
+            document.getElementById("link2_bg").src = "./hindi_assets/home_.png";
+
+            English.checked = false;
+            Hindi.checked = true;
+            Gujrati.checked = false;
+
+        }
+
+        if (lang === "Gujrati") {
+            document.getElementById('body').style.setProperty("font-family", 'gujratiFont');
+            // document.getElementById('body').classList.add("font-bold")
+
+            document.getElementById("link2_bg").src = "./gujrati_assets/home_.png";
+
+            English.checked = false;
+            Hindi.checked = false;
+            Gujrati.checked = true;
+
+        }
+
+        // console.log(lang)
+
+
+        function val(selectLang) {
+
+            var d = selectLang;
+            localStorage.removeItem("language");
+            localStorage.setItem("language", d);
+            lang = localStorage.getItem("language");
+
+            document.getElementById("home_title2").innerHTML = data[lang].home_title2;
+            document.getElementById("banner_2_text_one").innerHTML = data[lang].banner_2_text_one;
+            document.getElementById("banner_2_text_two").innerHTML = data[lang].banner_2_text_two;
+            document.getElementById("banner_2_text_three").innerHTML = data[lang].banner_2_text_three;
+
+            document.getElementById("slide3_text").innerHTML = data[lang].slide_3;
+            document.getElementById("slide4_text").innerHTML = data[lang].slide_4;
+            document.getElementById("slide5_text").innerHTML = data[lang].slide_5;
+
+            if (lang === "English") {
+                // window.location.reload();
+
+                document.getElementById('body').style.setProperty("font-family", 'customFont');
+
+                document.getElementById("link2_bg").src = "./assets/home_.png";
+
+            }
+            if (lang === "Hindi") {
+                // window.location.reload();
+
+                document.getElementById('body').style.setProperty("font-family", 'hindi');
+                // document.getElementById('body').classList.add("font-bold")
+
+                document.getElementById("link2_bg").src = "./hindi_assets/home_.png";
+            }
+
+            if (lang === "Gujrati") {
+                // window.location.reload();
+
+                document.getElementById('body').style.setProperty("font-family", 'gujratiFont');
+                // document.getElementById('body').classList.add("font-bold")
+
+                document.getElementById("link2_bg").src = "./gujrati_assets/home_.png";
+            }
+
+        }
+
+        //fetch('json/data.json')
+        //  .then((response) => response.json())
+        //  .then((json) => {
+        //     data = json;
+
+        document.getElementById("home_title2").innerHTML = data[lang].home_title2;
+        document.getElementById("banner_2_text_one").innerHTML = data[lang].banner_2_text_one;
+        document.getElementById("banner_2_text_two").innerHTML = data[lang].banner_2_text_two;
+        document.getElementById("banner_2_text_three").innerHTML = data[lang].banner_2_text_three;
+
+        document.getElementById("slide3_text").innerHTML = data[lang].slide_3;
+        document.getElementById("slide4_text").innerHTML = data[lang].slide_4;
+        document.getElementById("slide5_text").innerHTML = data[lang].slide_5;
+        //   });
+
+    </script>
+
+    <!-- slider script -->
+    <script src="./js_script/script.js"></script>
+
+    <script src="djp.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+/* font family */
+@font-face {
+    font-family: "customFont";
+    src: url("./fonts/Baloo\ Regular\ 400.ttf");
+  
+  }
+  
+  /* @font-face {
+  font-family: "hindi";
+  src: url("fonts/AdobeDevanagari-Bold.otf");
+  } */
+  
+  @font-face {
+    font-family: "hindi";
+    src: url("./fonts/ITFDevanagari.ttc");
+  
+  
+  }
+
+/* Radio button for language select css */
+
+#language{
+    background-color: #ecbf50;
+    /* border-radius: 20%; */
+  }
+  #langSelect label {
+    display: block;
+    padding: 5px;
+    position: relative;
+    /* padding-left: 20px; */
+  }
+  
+  #langSelect label input {
+    display: none;
+  }
+  
+  #langSelect label span {
+    border: 1px solid #fff;
+    overflow: hidden;
+    font-size:9pt;
+    /* color: white; */
+
+  }
+  
+  #langSelect input:checked+span {
+    /* background: #ccf; */
+    background: #fff;
+    color: black;
+    border-color: black;
+    /* #ccf; */
+  }
+
+  /* play pause btn animation */
+
+  @keyframes wiggle {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    75% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+  
+  .animate-wiggle {
+    animation: 0.5s wiggle 1s;
+  }
+
+  #langSelect {
+    animation: slidein1 0.5s ease-in 0s;
+  }
+  @keyframes slidein1 {
+    from {
+      transform: translateY(-100%);
+      /* transform: translateX(-20%); */
+      /* transform: rotate(-10deg); */
+      /* width: 300%; */
+    }
+  
+    to {
+      /* margin-top: 0%; */
+      transform: translateY(0%);
+      /* transform: rotate(10deg); */
+      /* width: 100%; */
+    }
+  }
